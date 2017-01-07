@@ -12,5 +12,5 @@ class Article(models.Model):
 class Comments(models.Model):
     class Meta():
         db_table = "comments"
-    comments_text = models.TextField()
+    comments_text = models.TextField(verbose_name="Текст комментария")
     comments_article = models.ForeignKey(Article)
